@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151218113500) do
+ActiveRecord::Schema.define(version: 20151218123534) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "first_name",      null: false
-    t.string   "last_name",       null: false
-    t.string   "password_digest", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "email",             null: false
+    t.string   "first_name",        null: false
+    t.string   "last_name",         null: false
+    t.string   "password_digest",   null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "customer_id"
+    t.string   "credit_card_token"
   end
 
 end

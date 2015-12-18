@@ -1,1 +1,12 @@
 <h1>Welcome to the braintree subscription</h1>
+
+<h2>Available Plans</h2>
+<ul>
+	<% @plans.each do |plan| %>
+	<li>
+		<p> <%= plan.name %></p>
+		<p>€ <%= plan.price %></p> per month
+		<%= button_to "Subscribe", subscriptions_path(plan_id: plan.id ) %>
+	</li>
+	<% end %>
+</ul>

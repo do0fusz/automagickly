@@ -1,0 +1,11 @@
+<%= form_for :credit_card, url: Braintree::TransparentRedirect.url do |form| %>
+	<%= hidden_field_tag :tr_data, @tr_data %>
+	
+	<%= form.label :number %>
+	<%= form.text_field :number %>
+
+	<%= form.label :expiration_date %>
+	<%= form.text_field :expiration_date, placeholder: "mm/yyyy" %>
+
+	<%= submit_tag "Add credit card" %>
+<% end %>

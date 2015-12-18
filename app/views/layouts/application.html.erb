@@ -12,6 +12,13 @@
 <% else %>
   <%= link_to "Log in", sign_in_path %> | <%= link_to "Sign up", sign_up_path %>
 <% end %>
+
+<% flash.each do |key,value | %>
+	<div class="alert alert-<%= key %>"> 
+		<%= value  %>
+	</div>
+<% end %>
+
 <%= yield %>
 
 </body>
