@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#welcome'
+
+  resources :payment_methods, only: [:new]
+  
   get "/sign_up" => "users#new", as: :sign_up
   post "/sign_up" => "users#create"
 
